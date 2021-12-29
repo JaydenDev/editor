@@ -2,27 +2,11 @@
 
 <head>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-
-<style>
-  #textarea {
-    outline: 0px solid transparent;
-    padding: 10px 16px;
-    counter-reset: line;
-}
-#textarea .lines {
-  display: block;
-}
-#textarea .lines:before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  border-right: 1px solid #ddd;
-  margin-right: .5em;
-  color: #888
-}
-</style>
 
 
 <body class=" bg-white">
@@ -46,13 +30,17 @@
   </div>
   </div>
   <br>
-  <h1> Start Typing Below... </h1>
-  <p>This is a basic text editor made with TailwindCSS</p> 
-  <br>
-  <div id="textarea" class="px-5 py-5 bg-white text-black font-mono" contenteditable="true">
-    <span class="lines"></span>&nbsp;
+
+  <div class="sample-toolbar">
+    <a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
+    <a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
+    <a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
+    <a href="javascript:void(0)" onclick="setUrl()"><span class="fa fa-link fa-fw"></span></a>
+    <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
   </div>
 
+  <div class="editor" id="sampleeditor">
+  </div>
   <hr>
   This is beta software, what it is now will not be what it is on first stable release.
 </html>
