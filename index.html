@@ -1,47 +1,36 @@
 <html>
 
 <head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="out.css">
   <script src="script.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
 
-<body class=" bg-white">
+<body class=" bg-gray-900">
 
-  <!-- navbar -->
-  <div class="px-5 py-5 bg-blue-500">
+  <div class="px-5 py-5 bg-gray-800">
     <ul class="flex">
       <li class="mr-6">
-        <a href="/" class="text-white"> JaydenDev WindEdit</a>
+        <a href="/" class="text-white">JaydenDev Editor</a>
       </li>
       <li class="mr-6">
-        <a class="text-white hover:text-blue-800" href="https://github.com/JaydenDev/windedit">GitHub</a>
+        <a class="text-white hover:text-blue-800" href="https://github.com/JaydenDev/editor">GitHub</a>
       </li>
-      <!-- <li class="mr-12">
-        <a class="text-white hover:text-blue-800" href="https://scratch.mit.edu/users/MagicCrayon9342">Scratch</a>
-      </li>
-      <li class="mr-6">
-      <a class="text-white hover:text-blue-800" href="#">Link</a>
-    </li> -->
     </ul>
   </div>
   </div>
   <br>
 
-  <div class="sample-toolbar">
+  <div class="bg-gray-700 border-0 text-white sample-toolbar">
     <a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
     <a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
     <a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
     <a href="javascript:void(0)" onclick="setUrl()"><span class="fa fa-link fa-fw"></span></a>
-    <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
+    <span><input id="txtFormatUrl" placeholder="url" class="p-3 bg-gray-800 rounded-lg w-[89vw] form-control"></span>
   </div>
 
-  <div class="editor" id="sampleeditor" contenteditable="true">
+  <div class="editor" id="sampleeditor">
   </div>
-  <hr>
-  This is beta software, what it is now will not be what it is on first stable release.
-
 </html>
